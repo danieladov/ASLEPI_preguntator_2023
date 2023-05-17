@@ -273,7 +273,8 @@ function createMockExam(data) {
     const numOfQuestionsPerTopic = 10;
 
     data.forEach(topic => {
-        const questions = topic.questions;
+        //Create a copy of the questions array to avoid modifying the original data
+        const questions = [...topic.questions];
         for(let i = 0; i < numOfQuestionsPerTopic; i++) {
             const randomIndex = Math.floor(Math.random() * questions.length);
             mockExamQuestions.push(questions[randomIndex]);

@@ -270,7 +270,7 @@ function hideAnswers() {
 
 function createMockExam(data) {
     let mockExamQuestions = [];
-    const numOfQuestionsPerTopic = 5;
+    const numOfQuestionsPerTopic = 10;
 
     data.forEach(topic => {
         const questions = topic.questions;
